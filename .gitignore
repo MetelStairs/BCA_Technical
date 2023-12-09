@@ -7,3 +7,7 @@
 .idea/vcs.xml
 .idea/workspace.xml
 __pycache__/hailstone.cpython-39.pyc
+__pycache__/hailstone.cpython-311.pyc
+.idea/sonarlint/issuestore/a/0/a0f2b2ef9a60c28a8b92675013397b63bd723cef
+.idea/sonarlint/issuestore/9/5/95fb619dbc84d4554835095b2b00169189b67ddd
+Tests/__pycache__/hailstone_unit_tests.cpython-311.pyc
