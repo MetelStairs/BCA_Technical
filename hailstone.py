@@ -10,8 +10,8 @@ class HailstoneClass:
         Function for checking if inputted value is Int
         """
         try:
-            return type(int(value)) == int
-
+            int(value)
+            return True
         except ValueError:
             return False
 
@@ -48,7 +48,6 @@ class HailstoneClass:
 
         return sequence, steps, text_summary
 
-
     def main_hailstone_function(starting_number):
         """
         Function prints the output and potential errors of the hailstone sequence
@@ -66,5 +65,5 @@ class HailstoneClass:
 
 
 if __name__ == "__main__":
-    starting_number = 25
+    starting_number = input("Please choose a starting number:")
     HailstoneClass.main_hailstone_function(starting_number)
