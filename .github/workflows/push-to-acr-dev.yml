@@ -1,3 +1,5 @@
+docker_name = "hailstone-dev"
+
 on:
   push:
     branches:
@@ -30,5 +32,5 @@ jobs:
       - name: Build Docker image
         run: |
           echo 'Starting the build process'
-          docker build -t "hailstone-dev":${{ github.event_name }} .
+          docker build -t docker_name:${{ github.event_name }} .
   
