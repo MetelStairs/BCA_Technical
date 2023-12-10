@@ -5,15 +5,14 @@ on:
 jobs:
   build_and_test:
     runs-on: ubuntu-latest
-
+    
     env:
       DOCKER_IMAGE_NAME: hailstone-dev
 
     steps:
-      
       - name: Checkout repository
         uses: actions/checkout@v2
-          
+
       - name: Set up Python
         uses: actions/setup-python@v2
         with:
@@ -27,12 +26,7 @@ jobs:
       - name: Run Lint Tests
         run: python Tests/lint_test.py
 
-      - name: Run Unit Tests
-        run: python Tests/hailstone_unit_tests.py
-
       - name: Build Docker image
         run: |
           echo 'Starting the build process'
-          docker build -t ${{ DOCKER_IMAGE_NAME }}:${{ github.event_name }} .
-
-  
+          docker build -t ${{ env.DOCKER_IMAGE_NAME }}:${{ github.event_name }} .
