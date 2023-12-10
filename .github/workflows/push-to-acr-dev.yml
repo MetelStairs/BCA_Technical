@@ -1,4 +1,4 @@
-name: Push Dockerized app to ACR
+name: Dev Env Push Dockerized app to ACR
 
 on:
   push:
