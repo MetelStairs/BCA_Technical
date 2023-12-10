@@ -1,3 +1,5 @@
+name: Push Dockerized app to ACR
+
 on:
   push:
     branches:
