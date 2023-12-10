@@ -33,5 +33,6 @@ jobs:
       - name: Build Docker image
         run: |
           echo 'Starting the build process'
-          docker build -t ${{ DOCKER_IMAGE_NAME }}${{ github.event_name }} .
+          docker build -t ${{ DOCKER_IMAGE_NAME }}:${{ github.event_name }} .
+
   
