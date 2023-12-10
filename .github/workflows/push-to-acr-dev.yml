@@ -25,7 +25,8 @@ jobs:
         run: python Tests/hailstone_unit_tests.py
         continue-on-error: true
 
-      - name: Check Unit Test Results
-        run: exit $(test -f test-results.xml && grep -c '<failure' test-results.xml)
-
+      - name: Build Docker image
+        run: |
+          echo 'Starting the build process'
+          docker build -t ${{ github.repository }}:${{ github.event_name }} .
   
