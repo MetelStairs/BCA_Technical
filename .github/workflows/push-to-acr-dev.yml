@@ -18,6 +18,11 @@ jobs:
           pwd
           echo 'Contents of the current directory:'
           ls -R
+          echo 'Going back one directory:'
+          cd ..
+          pwd
+          echo 'Contents of the parent directory:'
+          ls -R
 
       - name: Install dependencies
         run: |
