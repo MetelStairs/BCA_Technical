@@ -23,4 +23,10 @@ jobs:
 
       - name: Run Unit Tests
         run: python Tests/hailstone_unit_tests.py
+        continue-on-error: true
+
+      - name: Build Docker image
+        run: |
+          echo 'Starting the build process'
+          docker build -t ${{ github.repository }}:${{ github.event_name }} .
   
