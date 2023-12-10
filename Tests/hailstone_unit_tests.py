@@ -1,3 +1,6 @@
+import sys
+sys.path.append('/home/runner/work/BCA_Technical/BCA_Technical')
+
 import unittest
 from hailstone import HailstoneClass
 
