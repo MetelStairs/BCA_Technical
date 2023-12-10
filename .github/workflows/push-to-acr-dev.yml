@@ -11,6 +11,13 @@ jobs:
         uses: actions/setup-python@v2
         with:
           python-version: 3.11
+          
+      - name: Debug
+        run: |
+          echo 'Current working directory:'
+          pwd
+          echo 'Contents of the current directory:'
+          ls -R
 
       - name: Install dependencies
         run: |
