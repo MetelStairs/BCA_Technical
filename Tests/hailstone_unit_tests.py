@@ -12,7 +12,7 @@ class TestHailstone(unittest.TestCase):
             HailstoneClass.hailstone_sequence("car")
         print("String input passed")
         with self.assertRaises(ValueError):
-            HailstoneClass.hailstone_sequence("22.3")
+            HailstoneClass.hailstone_sequence(22.3)
         print("Float input passed")
         with self.assertRaises(ValueError):
             HailstoneClass.hailstone_sequence("")
