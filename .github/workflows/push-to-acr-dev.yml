@@ -33,11 +33,11 @@ jobs:
           docker build -t ${{ env.DOCKER_IMAGE_NAME }}:${{ github.event_name }} .
 
         #THIS WILL FAIL AS I DO NOT HAVE AN ACR SET UP
-      #- name: Push Docker image to Azure Container Registry
-       # run: |
-       #   echo 'Starting the push process'
-       #   docker login -u ${{ secrets.ACR_USERNAME }} -p ${{ secrets.ACR_PASSWORD }} ${{ env.ACR_NAME }}.azurecr.io
-       #   docker push ${{ env.ACR_NAME }}.azurecr.io/${{ env.DOCKER_IMAGE_NAME }}:${{ github.event_name }}
+      - name: Push Docker image to Azure Container Registry
+        run: |
+          echo 'Starting the push process'
+          docker login -u ${{ secrets.ACR_USERNAME }} -p ${{ secrets.ACR_PASSWORD }} ${{ env.ACR_NAME }}.azurecr.io
+          docker push ${{ env.ACR_NAME }}.azurecr.io/${{ env.DOCKER_IMAGE_NAME }}:${{ github.event_name }}
           
       - name: Cleanup
         run: echo 'Build, test, and push process completed successfully'
