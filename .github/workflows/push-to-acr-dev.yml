@@ -7,6 +7,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      
+      - name: Clean Previous Runs
+        run: rm -rf BCA_Technical
+        
       - name: Set up Python
         uses: actions/setup-python@v2
         with:
