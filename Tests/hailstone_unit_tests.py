@@ -40,7 +40,8 @@ class TestHailstone(unittest.TestCase):
         print("Input of 14 has passed")
 
         sequence, steps, text_summary = HailstoneClass.hailstone_sequence(25)
-        self.assertEqual(sequence, [25, 76, 38, 19, 58, 29, 88, 44, 22, 11, 34, 17, 52, 26, 13, 40, 20, 10, 5, 16, 8, 4, 2, 1])
+        self.assertEqual(sequence,
+                         [25, 76, 38, 19, 58, 29, 88, 44, 22, 11, 34, 17, 52, 26, 13, 40, 20, 10, 5, 16, 8, 4, 2, 1])
         self.assertEqual(steps, 23)
         print("Input of 25 has passed")
         print("#################################")
@@ -48,6 +49,7 @@ class TestHailstone(unittest.TestCase):
     print("#################################")
     print("All Tests Passed!")
     print("#################################")
+
 
 if __name__ == '__main__':
     unittest.main()
