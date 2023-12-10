@@ -21,9 +21,11 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
+      - name: Run Lint Tests
+        run: python Tests/lint_test.py
+
       - name: Run Unit Tests
         run: python Tests/hailstone_unit_tests.py
-        continue-on-error: true
 
       - name: Build Docker image
         run: |

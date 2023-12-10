@@ -1,4 +1,5 @@
 import sys
+
 sys.path.append('/home/runner/work/BCA_Technical/BCA_Technical')
 
 import unittest
@@ -12,7 +13,7 @@ class TestHailstone(unittest.TestCase):
             HailstoneClass.hailstone_sequence("car")
         print("String input passed")
         with self.assertRaises(ValueError):
-            HailstoneClass.hailstone_sequence(22.3)
+            HailstoneClass.hailstone_sequence("22.3")
         print("Float input passed")
         with self.assertRaises(ValueError):
             HailstoneClass.hailstone_sequence("")
@@ -48,10 +49,6 @@ class TestHailstone(unittest.TestCase):
         self.assertEqual(steps, 23)
         print("Input of 25 has passed")
         print("#################################")
-
-    print("#################################")
-    print("All Tests Passed!")
-    print("#################################")
 
 
 if __name__ == '__main__':
