@@ -1,4 +1,4 @@
-name: Prod Dev Deploy Python project to Azure Function App
+name: Dev Env Deploy Python project to Azure Function App
 
 on:
   push:
