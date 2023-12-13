@@ -2,7 +2,8 @@ import sys
 import os
 import unittest
 
-sys.path.append('/home/runner/work/BCA_Technical/BCA_Technical')
+current_directory = os.getcwd()
+sys.path.append(current_directory)
 
 from hailstone import HailstoneClass
 
