@@ -68,3 +68,4 @@ class HailstoneClass:
 if __name__ == "__main__":
     starting_number = input("Please choose a starting number:")
     HailstoneClass.main_hailstone_function(starting_number)
+    
