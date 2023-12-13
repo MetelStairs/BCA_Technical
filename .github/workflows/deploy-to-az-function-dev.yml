@@ -27,7 +27,7 @@ jobs:
     - name: Set up Python
       uses: actions/setup-python@v3
       with:
-        python-version: 3.11
+        python-version: ${{ env.PYTHON_VERSION }}
 
     - name: Install dependencies
       run: |
@@ -38,7 +38,7 @@ jobs:
       run: python Tests/lint_test.py
 
     - name: Run Unit Tests
-      run: python BCA_Technical/Tests/hailstone_unit_tests.py
+      run: python Tests/hailstone_unit_tests.py
 
 
     - name: 'Run Azure Functions Action'
