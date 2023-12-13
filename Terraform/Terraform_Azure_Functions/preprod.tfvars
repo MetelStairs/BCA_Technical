@@ -1,0 +1,5 @@
+resource_group_name      = "BCA-Hailstone-PreProd"
+location                 = "South UK"
+az_function_name         = "bca-az-function-preprod"
+app_service_plan_name     = "bca-function-app-service-plan-preprod"
+storage_account_name      = "bca-storage-account-preprod"
