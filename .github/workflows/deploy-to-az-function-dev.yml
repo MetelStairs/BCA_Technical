@@ -38,7 +38,7 @@ jobs:
       run: python Tests/lint_test.py
 
     - name: Run Unit Tests
-      run: python Tests/hailstone_unit_tests.py
+      run: python BCA_Technical/Tests/hailstone_unit_tests.py
 
 
     - name: 'Run Azure Functions Action'
