@@ -1,11 +1,9 @@
 import os
 import unittest
 
-current_directory = os.getcwd()
 os.chdir("..")
 
 from hailstone import HailstoneClass
-
 
 
 class TestHailstone(unittest.TestCase):
