@@ -2,12 +2,13 @@ import sys
 import os
 import unittest
 
+base_dir = os.getcwd()
+print(base_dir)
 os.chdir("..")
 base_dir = os.getcwd()
 print(base_dir)
-sys.path.append(base_dir)
 
-from hailstone import HailstoneClass
+from BCA_Technical.hailstone import HailstoneClass
 
 
 class TestHailstone(unittest.TestCase):
