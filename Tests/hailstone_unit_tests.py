@@ -2,7 +2,12 @@ import sys
 import os
 import unittest
 
-sys.path.append('/home/runner/work/BCA_Technical/BCA_Technical/Tests')
+current_directory = os.getcwd()
+
+files = os.listdir(current_directory)
+
+for file in files:
+    print(file)
 
 from hailstone import HailstoneClass
 
