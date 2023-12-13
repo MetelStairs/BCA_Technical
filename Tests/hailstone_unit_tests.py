@@ -1,6 +1,11 @@
 import sys
 import os
 import unittest
+
+os.chdir("..")
+base_dir = os.getcwd()
+sys.path.append(base_dir)
+
 from hailstone import HailstoneClass
 
 
@@ -50,8 +55,4 @@ class TestHailstone(unittest.TestCase):
 
 
 if __name__ == '__main__':
-    os.chdir("..")
-    base_dir = os.getcwd()
-    sys.path.append(base_dir)
-
     unittest.main()
