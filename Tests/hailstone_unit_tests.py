@@ -1,9 +1,9 @@
-import sys
+import os
 import unittest
 from hailstone import HailstoneClass
 
-sys.path.append('/home/runner/work/BCA_Technical/BCA_Technical/Tests')
-
+current_directory = os.getcwd()
+os.chdir("..")
 
 
 class TestHailstone(unittest.TestCase):

@@ -11,7 +11,7 @@ provider "azurerm" {
 # Define variables
 variable "resource_group_name" {
   description = "The name of the Azure Resource Group"
-  default     = "BCA-Dev-Hailstone"
+  default     = "BCA-Hailstone-Dev"
 }
 
 variable "location" {
@@ -26,17 +26,17 @@ variable "acr_name" {
 
 variable "az_function_name" {
   description = "The name of the Azure Function"
-  default     = "bca-az-function"
+  default     = "bca-az-function-dev"
 }
 
 variable "app_service_plan_name" {
   description = "The name of the app service plan assigned to the function app"
-  default = "bca-function-app-service-plan"
+  default = "bca-function-app-service-plan-dev"
 }
 
 variable "storage_account_name" {
   description = "The name of the Azure Storage Account"
-  default     = "bca-storage-account"
+  default     = "bca-storage-account-dev"
 }
 
 # Create a resource group
