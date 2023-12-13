@@ -4,6 +4,7 @@ import unittest
 
 os.chdir("..")
 base_dir = os.getcwd()
+print(base_dir)
 sys.path.append(base_dir)
 
 from hailstone import HailstoneClass
