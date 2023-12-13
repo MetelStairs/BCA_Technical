@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
 
     env:
-      AZURE_FUNCTIONAPP_NAME: 'hailstone-app-dev'   # set this to your function app name on Azure
+      AZURE_FUNCTIONAPP_NAME: 'bca-az-function-dev'   # set this to your function app name on Azure
       AZURE_FUNCTIONAPP_PACKAGE_PATH: '.'       # set this to the path to your function app project, defaults to the repository root
       PYTHON_VERSION: '3.11'                     # set this to the python version to use (e.g. '3.6', '3.7', '3.8')
 
@@ -39,6 +39,17 @@ jobs:
 
     - name: Run Unit Tests
       run: python Tests/hailstone_unit_tests.py
+
+    - name: Set up Terraform
+      uses: hashicorp/setup-terraform@v1
+      with:
+        terraform_version: 1.0.0
+
+    - name: Terraform Init
+      run: terraform init -chdir=Terraform/Terraform_Azure_Functions
+
+    - name: Terraform Apply
+      run: terraform apply -auto-approve -chdir=Terraform/Terraform_Azure_Functions -var-file=dev.tfvars
 
 
     - name: 'Run Azure Functions Action'
